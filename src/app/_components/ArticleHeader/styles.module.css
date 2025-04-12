@@ -1,14 +1,4 @@
 .heroImageWrapper {
-  --mcc-color-1: #06c; /* Royal Blue */
-  --mcc-color-2: #0092e6; /* Blue */
-  --mcc-color-3: #00b6d8; /* Cyan */
-  --mcc-color-4: #00d4af; /* Turquoise */
-  --mcc-color-5: #85eb83; /* Light Green */
-  --mcc-color-6: #f9f871; /* Lemon Yellow */
-  --color-gradient-mcc: var(--mcc-color-1), var(--mcc-color-2),
-    var(--mcc-color-3), var(--mcc-color-4), var(--mcc-color-5),
-    var(--mcc-color-6);
-
   position: relative;
   width: 100%;
   max-width: 900px;

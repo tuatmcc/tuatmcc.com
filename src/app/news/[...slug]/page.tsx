@@ -11,7 +11,6 @@ import { BackToTop } from '~/app/_components/BackToTop';
 import { Footer } from '~/app/_components/Footer';
 import { Navbar } from '~/app/_components/Navbar';
 import { Navigation } from '~/app/_components/Navigation/Navigation';
-import compile from '~/lib/compiler';
 import {
   defaultOgImage,
   defaultOpenGraph,
@@ -69,7 +68,6 @@ export default async function News({ params }: { params: Promise<Params> }) {
 
   const { title, date, img, tags, permalink } = post;
   const parentPath = permalink.split('/').slice(0, -1).join('/');
-  const content = await compile(post.content); // Tips: これはビルド中にコンパイルされる。
   return (
     <>
       <Navbar theme="auto" />

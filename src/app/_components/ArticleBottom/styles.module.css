@@ -1,11 +1,4 @@
 .articleBottom {
-  --shadow-neumorphism: 4px 4px 8px var(--color-gray-300), -4px -4px 8px
-    var(--color-gray-0);
-  --shadow-neumorphism-hover: 6px 6px 12px var(--color-gray-400), -6px -6px 12px
-    var(--color-gray-0);
-  --shadow-neumorphism-inset: inset 4px 4px 8px var(--color-gray-300), inset
-    -4px -4px 8px var(--color-gray-0);
-
   margin: 64px 0;
   font-family: var(--font-family-noto-sans-jp);
 
