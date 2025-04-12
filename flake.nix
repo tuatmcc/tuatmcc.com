@@ -15,6 +15,7 @@
         # When execute `nix develop`, you go in shell installed nil.
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
+            nodejs-slim
             bun
           ];
         };
