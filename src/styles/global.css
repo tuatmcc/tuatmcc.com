@@ -1,2 +1,42 @@
 @import "tailwindcss";
-@import url("./_variables.css");
+@theme {
+  /* Brand Colors */
+  --mcc-color-1: #06c; /* Royal Blue */
+  --mcc-color-2: #0092e6; /* Blue */
+  --mcc-color-3: #00b6d8; /* Cyan */
+  --mcc-color-4: #00d4af; /* Turquoise */
+  --mcc-color-5: #85eb83; /* Light Green */
+  --mcc-color-6: #f9f871; /* Lemon Yellow */
+  --color-mcc-1: #06c; /* Royal Blue */
+  --color-mcc-2: #0092e6; /* Blue */
+  --color-mcc-3: #00b6d8; /* Cyan */
+  --color-mcc-4: #00d4af; /* Turquoise */
+  --color-mcc-5: #85eb83; /* Light Green */
+  --color-mcc-6: #f9f871; /* Lemon Yellow */
+
+  /* Gray (From Chakra UI) */
+  --color-gray-0: #fff;
+  --color-gray-1000: #000;
+
+  /* Utility Colors */
+
+  /* Size */
+  --navbar-height: 56px;
+  --scrollbar-width: 10px;
+  --font-size-navbar: 36px;
+  --article-max-width: 900px;
+
+  /* Font Family is defined in layout.tsx */
+}
+
+@theme inline {
+  --shadow-neumorphism: 4px 4px 8px var(--color-gray-300), -4px -4px 8px
+    var(--color-gray-0);
+  --shadow-neumorphism-hover: 6px 6px 12px var(--color-gray-400), -6px -6px 12px
+    var(--color-gray-0);
+  --shadow-neumorphism-inset: inset 4px 4px 8px var(--color-gray-300), inset
+    -4px -4px 8px var(--color-gray-0);
+  --color-gradient-mcc: var(--color-mcc-1), var(--color-mcc-2),
+    var(--color-mcc-3), var(--color-mcc-4), var(--color-mcc-5),
+    var(--color-mcc-6);
+}

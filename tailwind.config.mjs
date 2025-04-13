@@ -9,9 +9,6 @@ export default {
       tektur: ['Tektur', 'sans-serif'],
       mono: ['JetBrains Mono', 'monospace'],
     },
-    colors: {
-      mcc: '#0066cc',
-    },
   },
   plugins: [],
 };
