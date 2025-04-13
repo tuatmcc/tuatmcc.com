@@ -147,13 +147,23 @@
           background-color: var(--color-gray-0);
 
           &:not(:last-child) {
-            border-right: 1px solid var(--color-gray-100);
+            border-right: 2px solid var(--color-gray-200);
           }
         }
 
         &:not(:last-child) {
           & td {
-            border-bottom: 1px solid var(--color-gray-100);
+            border-bottom: 2px solid var(--color-gray-200);
+          }
+        }
+
+        &:last-child {
+          & td:first-of-type {
+            border-radius: 0 0 0 8px;
+          }
+
+          & td:last-of-type {
+            border-radius: 0 0 8px 0;
           }
         }
       }
@@ -173,7 +183,6 @@
       word-break: break-word;
       background-color: var(--color-gray-300);
       border-radius: 5px;
-      box-shadow: var(--shadow-neumorphism);
 
       @media (max-width: 768px) {
         font-size: 14px;
@@ -187,7 +196,6 @@
 
   & pre {
     display: flex;
-    padding: 12px;
     overflow: auto;
     position: static;
     margin: 0;
@@ -197,8 +205,7 @@
 
     & code {
       font-family: var(--font-family-jetbrains-mono);
-      width: 100%;
-      padding: 0;
+      padding: 12px 28px 12px 12px;
       margin: 0;
       color: white;
       background-color: inherit;
@@ -212,13 +219,16 @@
     & figcaption {
       font-family: var(--font-family-jetbrains-mono);
       display: inline-block;
-      padding: 8px 16px 16px;
-      margin-bottom: -8px;
+      padding: 8px 16px;
       font-size: 14px;
       color: var(--color-gray-100);
       background-color: var(--color-gray-700);
       border-radius: 8px 8px 0 0;
       box-shadow: var(--shadow-neumorphism-top);
+    }
+
+    &:has(figcaption) pre {
+      border-radius: 0 8px 8px 8px;
     }
 
     &:not(:has(figcaption)) pre {
