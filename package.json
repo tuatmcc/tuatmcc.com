@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "preview": "serve out",
-    "build": "next build",
+    "postinstall": "run-s fetch-content",
+    "build:next": "next build",
+    "build:velite": "velite",
+    "build": "run-s setup build",
     "build-storybook": "storybook build",
-    "build:prod": "run-s setup build",
     "dev": "run-p dev:*",
     "dev:next": "next dev",
     "fmt": "biome check --write .",
