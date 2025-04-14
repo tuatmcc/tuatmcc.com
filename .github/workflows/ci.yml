@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup | Install bun
-        uses: oven-sh/bun-install@v1
+        uses: oven-sh/setup-bun@v1
 
       - name: Setup | Install Dependencies
         run: bun install --frozen-lockfile
@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup | Install bun
-        uses: oven-sh/bun-install@v1
+        uses: oven-sh/setup-bun@v1
 
       - name: Setup | Install Dependencies
         run: bun install --frozen-lockfile
