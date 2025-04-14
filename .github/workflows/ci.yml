@@ -43,5 +43,8 @@ jobs:
       - name: Setup | Install Dependencies
         run: bun install --frozen-lockfile
 
+      - name: Setup | velite
+        run: bun run velite
+
       - name: Run | Type Check
         run: bun run typecheck
