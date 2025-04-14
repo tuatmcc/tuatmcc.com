@@ -34,13 +34,6 @@ const nextConfig = {
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
 
-    // ------------------ MDX ------------------
-    config.resolve.plugins = [
-      new TsconfigPathsPlugin({
-        extensions: ['.ts', '.tsx', '.mdx'],
-      }),
-    ];
-
     return config;
   },
 };
