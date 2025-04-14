@@ -88,7 +88,6 @@ export default async function Blog({ params }: { params: Promise<Params> }) {
             <div
               // biome-ignore lint/security/noDangerouslySetInnerHtml: しかたがない
               dangerouslySetInnerHTML={{ __html: post.content }}
-              suppressHydrationWarning
             />
           </Article>
           <ArticleBottom
