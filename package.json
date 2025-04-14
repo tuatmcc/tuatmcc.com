@@ -7,7 +7,7 @@
     "postinstall": "run-s fetch-content",
     "build:next": "next build",
     "build:velite": "velite",
-    "build": "run-s setup build",
+    "build": "run-s build:velite build:next",
     "build-storybook": "storybook build",
     "dev": "run-p dev:*",
     "dev:next": "next dev",
