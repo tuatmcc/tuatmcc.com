@@ -29,7 +29,7 @@
     "@rehype-pretty/transformers": "^0.13.2",
     "@types/mdx": "^2.0.13",
     "@types/node": "22.14.0",
-    "@types/react": "19.1.0",
+    "@types/react": "19.1.2",
     "@types/react-dom": "19.1.1",
     "autoprefixer": "^10.4.21",
     "classnames": "^2.5.1",
