@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 const url = 'https://tuatmcc.com';
 const defaultTitle = 'MCC - 東京農工大学マイクロコンピュータークラブ';
-const ogImageUrl = 'https://tuatmcc.com/images/wordmark-logo-image.png';
+const ogImageUrl = 'https://tuatmcc.com/images/og-image.png';
 const description =
   'MCCは、東京農工大学の公認サークルで、ITに関することを学び、活動しているサークルです。学祭に制作物を出展したり、学内外のイベントに参加したり、学生同士で交流を深めたりしています。';
 
