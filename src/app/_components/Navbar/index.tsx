@@ -33,7 +33,7 @@ export const Navbar: FC<NavbarProps> = ({
             <NextLink href="/" className={styles.brand}>
               <WordmarkLogo
                 color={color === 'white' ? 'white' : undefined}
-                width={36}
+                height={36}
               />
             </NextLink>
           )}
