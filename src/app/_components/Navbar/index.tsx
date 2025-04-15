@@ -2,7 +2,7 @@
 
 import classnames from 'classnames';
 import NextLink from 'next/link';
-import { type FC, useCallback, useState } from 'react';
+import type { FC } from 'react';
 
 import styles from './styles.module.css';
 
@@ -33,7 +33,7 @@ export const Navbar: FC<NavbarProps> = ({
             <NextLink href="/" className={styles.brand}>
               <WordmarkLogo
                 color={color === 'white' ? 'white' : undefined}
-                size={36}
+                width={36}
               />
             </NextLink>
           )}
