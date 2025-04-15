@@ -4,8 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
-      "@/content": ["./.mdorganizer/generated"]
+      "~/*": ["src/*"]
     },
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -32,12 +31,9 @@
   },
   "include": [
     "next-env.d.ts",
-    "svgr.d.ts",
-    "mdx-components.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    ".next/types/**/*.ts",
-    ".mdorganizer/generated"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
