@@ -83,7 +83,7 @@
     "postcss": "^8.5.3",
     "postcss-selector-not": "^8.0.1",
     "storybook-css-modules": "^1.0.8",
-    "tailwindcss": "^4.1.3",
+    "tailwindcss": "^4.1.4",
     "typescript": "5.8.3",
     "velite": "^0.2.2",
     "wrangler": "^4.7.2"
