@@ -35,7 +35,7 @@
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.6.3",
-    "next": "15.2.4",
+    "next": "15.3.1",
     "npm-run-all2": "^7.0.2",
     "postcss-custom-media": "^11.0.5",
     "postcss-media-minmax": "^5.0.0",
