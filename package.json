@@ -34,7 +34,7 @@
     "autoprefixer": "^10.4.21",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
-    "framer-motion": "^12.6.3",
+    "framer-motion": "^12.7.4",
     "next": "15.2.4",
     "npm-run-all2": "^7.0.2",
     "postcss-custom-media": "^11.0.5",
