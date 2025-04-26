@@ -9,7 +9,7 @@ export const WireframeImage: FC = () => {
   const [visible, setVisible] = useState(false);
 
   scrollY.updateAndNotify = useCallback((y: number) => {
-    if (y > innerHeight * 1.5) {
+    if (y > innerHeight * 2) {
       setVisible(true);
     } else {
       setVisible(false);

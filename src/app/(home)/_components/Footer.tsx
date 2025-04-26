@@ -18,7 +18,7 @@ export const Footer: FC = () => {
     >
       <div className="flex flex-col py-24 items-center justify-center relative">
         <motion.p
-          className="text-xl font-bold mb-4 w-[640px] max-w-full mx-auto leading-8 p-4"
+          className="text-xl font-bold mb-4 w-[840px] max-w-full mx-auto leading-8 p-4"
           variants={{
             hidden: {
               opacity: 0,

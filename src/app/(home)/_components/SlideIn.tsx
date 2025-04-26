@@ -111,7 +111,7 @@ export const SlideIn: FC<Props> = () => {
             We are
             <span className="text-[#0066cc]"> MCC </span>!
           </motion.h2>
-          <p className="text-lg mb-6">
+          <p className="text-lg md:text-xl mb-6">
             マイクロコンピュータクラブ (通称MCC)は、
             <br />
             東京農工大学のプログラミングサークルです。

@@ -26,17 +26,28 @@
   --font-size-navbar: 36px;
   --article-max-width: 900px;
 
-  /* Font Family is defined in layout.tsx */
+  --cursor-circle: url("/assets/cursor-circle.svg") 15 15, default;
+  --background-image-slashed: repeating-linear-gradient(
+    -45deg,
+    #fff,
+    #fff 7px,
+    transparent 0,
+    transparent 14px
+  );
 }
 
 @theme inline {
-  --shadow-neumorphism: 4px 4px 8px var(--color-gray-300), -4px -4px 8px
-    var(--color-gray-0);
-  --shadow-neumorphism-hover: 6px 6px 12px var(--color-gray-400), -6px -6px 12px
-    var(--color-gray-0);
-  --shadow-neumorphism-inset: inset 4px 4px 8px var(--color-gray-300), inset
+  --shadow-neumorphism: 4px 4px 8px var(--color-gray-300),
     -4px -4px 8px var(--color-gray-0);
+  --shadow-neumorphism-hover: 6px 6px 12px var(--color-gray-400),
+    -6px -6px 12px var(--color-gray-0);
+  --shadow-neumorphism-inset: inset 4px 4px 8px var(--color-gray-300),
+    inset -4px -4px 8px var(--color-gray-0);
   --color-gradient-mcc: var(--color-mcc-1), var(--color-mcc-2),
     var(--color-mcc-3), var(--color-mcc-4), var(--color-mcc-5),
     var(--color-mcc-6);
+  --background-image-dotted: radial-gradient(
+    var(--color-gray-300) 4%,
+    transparent 4%
+  );
 }
