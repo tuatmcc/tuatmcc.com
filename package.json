@@ -13,7 +13,7 @@
     "dev:next": "next dev",
     "fmt": "biome check --write .",
     "lint": "biome check .",
-    "fetch-content": "bun ./scripts/fetch-content.ts",
+    "fetch-content": "node --import=tsx ./scripts/fetch-content.ts",
     "setup": "run-s fetch-content velite",
     "start": "next start",
     "storybook": "storybook dev -p 6006 --no-open",
@@ -84,6 +84,7 @@
     "postcss-selector-not": "^8.0.1",
     "storybook-css-modules": "^1.0.8",
     "tailwindcss": "^4.1.4",
+    "tsx": "^4.19.4",
     "typescript": "5.8.3",
     "velite": "^0.2.2",
     "wrangler": "^4.11.1"
