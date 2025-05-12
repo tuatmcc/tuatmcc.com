@@ -89,7 +89,7 @@
     "wrangler": "^4.11.1"
   },
   "optionalDependencies": {
-    "@next/env": "^15.2.4",
+    "@next/env": "^15.3.2",
     "webpack": "^5.99.5"
   }
 }
