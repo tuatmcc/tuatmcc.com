@@ -12,15 +12,15 @@
     "typecheck": "astro check"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.4",
-    "@astrojs/mdx": "^4.3.1",
+    "@astrojs/cloudflare": "^13.5.4",
+    "@astrojs/mdx": "^5.0.6",
     "@astrojs/partytown": "^2.1.4",
-    "@astrojs/react": "^4.3.0",
+    "@astrojs/react": "^5.0.5",
     "@tailwindcss/vite": "^4.1.3",
     "@types/canvas-confetti": "^1.9.0",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
-    "astro": "^5.12.6",
+    "astro": "^6.3.7",
     "astro-expressive-code": "^0.41.3",
     "astro-icon": "^1.1.5",
     "daisyui": "^5.0.50",
@@ -41,14 +41,14 @@
     "@iconify-json/ri": "^1.2.5",
     "@resvg/resvg-wasm": "^2.6.2",
     "@tailwindcss/typography": "^0.5.16",
-    "prettier-plugin-tailwindcss": "^0.6.14",
-    "react-svg": "^16.3.0",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "react-svg": "^17.2.4",
     "remark-math": "^6.0.0",
     "remark-normalize-headings": "^4.0.0",
     "remark-toc": "^9.0.0",
     "sass-embedded": "^1.89.2",
     "satori": "^0.16.2",
     "simple-git": "^3.28.0",
-    "typescript": "^5.9.2"
+    "typescript": "^6.0.3"
   }
 }

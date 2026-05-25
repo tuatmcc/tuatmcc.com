@@ -36,18 +36,16 @@ export default defineConfig({
   },
   adapter: cloudflare({
     imageService: "passthrough",
-    platformProxy: { enabled: true },
+    prerenderEnvironment: "node",
   }),
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Orbitron",
-        weights: ["500", "700"], // medium, bold
-        cssVariable: "--font-family-orbitron",
-      },
-    ],
-  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Orbitron",
+      weights: ["500", "700"], // medium, bold
+      cssVariable: "--font-family-orbitron",
+    },
+  ],
   env: {
     schema: {
       GOOGLE_ANALYTICS_ID: envField.string({
