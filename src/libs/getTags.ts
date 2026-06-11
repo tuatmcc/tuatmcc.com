@@ -1,8 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
-export const getTags = (
-  posts: CollectionEntry<"posts">[],
-): { name: string; count: number }[] => {
+export const getTags = (posts: CollectionEntry<"posts">[]): { name: string; count: number }[] => {
   const tagMap: Record<string, number> = {};
 
   posts.forEach((post) => {

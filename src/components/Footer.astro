@@ -37,12 +37,7 @@ const links = [
       {
         links.map(({ href, icon, label }) => (
           <div class="tooltip" data-tip={label}>
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-            >
+            <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
               <Icon name={icon} class="h-6 w-6" />
             </a>
           </div>

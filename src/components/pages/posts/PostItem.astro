@@ -29,9 +29,7 @@ const authors: string[] = post.data.author
         "group-hover:[clip-path:polygon(0_0,0_calc(100%-20px),200px_calc(100%-20px),220px_100%,calc(100%-39.4px)_100%,100%_calc(100%-39.4px),100%_0)]",
       ]}
     >
-      <h2
-        class="text-base-content line-clamp-2 text-base leading-6 font-semibold"
-      >
+      <h2 class="text-base-content line-clamp-2 text-base leading-6 font-semibold">
         {post.data.title}
       </h2>
 
@@ -65,9 +63,7 @@ const authors: string[] = post.data.author
             {post.data.tags.slice(0, 3).map((tag) => (
               <Tag>{tag}</Tag>
             ))}
-            {post.data.tags.length > 3 && (
-              <Tag variant="outline">+{post.data.tags.length - 3}</Tag>
-            )}
+            {post.data.tags.length > 3 && <Tag variant="outline">+{post.data.tags.length - 3}</Tag>}
           </div>
         )
       }

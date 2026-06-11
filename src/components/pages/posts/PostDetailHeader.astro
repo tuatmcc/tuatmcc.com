@@ -8,11 +8,7 @@ export interface Props {
 
 const { data } = Astro.props;
 const { title, date, tags } = data;
-const authors: string[] = data.author
-  ? [data.author]
-  : data.authors
-    ? data.authors
-    : [];
+const authors: string[] = data.author ? [data.author] : data.authors ? data.authors : [];
 ---
 
 <div class="flex flex-col gap-2 lg:gap-4">

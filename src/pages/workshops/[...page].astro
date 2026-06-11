@@ -10,9 +10,9 @@ export interface Props {
 }
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = (
-    await getCollection("workshopCovers", ({ data }) => !data.draft)
-  ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const posts = (await getCollection("workshopCovers", ({ data }) => !data.draft)).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
 
   return paginate(posts, {
     pageSize: PAGINATION_PAGE_SIZE,

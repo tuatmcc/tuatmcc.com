@@ -28,17 +28,12 @@ const authors: string[] = workshop.data.author
         "group-hover:[clip-path:polygon(0_0,0_calc(100%-20px),200px_calc(100%-20px),220px_100%,calc(100%-39.4px)_100%,100%_calc(100%-39.4px),100%_0)]",
       ]}
     >
-      <h2
-        class="text-base-content line-clamp-2 text-base leading-6 font-semibold"
-      >
+      <h2 class="text-base-content line-clamp-2 text-base leading-6 font-semibold">
         {workshop.data.title}
       </h2>
 
       <div class="text-base-content flex items-center gap-3 text-xs">
-        <time
-          datetime={workshop.data.date.toISOString()}
-          class="whitespace-nowrap"
-        >
+        <time datetime={workshop.data.date.toISOString()} class="whitespace-nowrap">
           {
             workshop.data.date.toLocaleDateString("ja-JP", {
               year: "numeric",

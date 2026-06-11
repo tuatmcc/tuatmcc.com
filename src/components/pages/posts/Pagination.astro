@@ -49,9 +49,7 @@ const { page } = Astro.props;
               class:list={[
                 "gird absolute top-[1px] right-[1.4px] bottom-[1px] left-[1.4px] place-content-center",
                 "[clip-path:polygon(9px_0,0_100%,calc(100%-9px)_100%,100%_0)]",
-                pageNumber === page.currentPage
-                  ? "bg-base-100 text-primary"
-                  : "text-base-100",
+                pageNumber === page.currentPage ? "bg-base-100 text-primary" : "text-base-100",
               ]}
             >
               {pageNumber}

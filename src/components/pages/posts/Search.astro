@@ -9,15 +9,9 @@ export interface Props {
 const { tags, current } = Astro.props;
 ---
 
-<div
-  class="border-primary flex w-full flex-col gap-4 lg:border-r p-2 pb-24 backdrop-blur-md"
->
+<div class="border-primary flex w-full flex-col gap-4 lg:border-r p-2 pb-24 backdrop-blur-md">
   <div class="flex flex-col gap-2">
-    <h2
-      class="font-orbitron text-base-content text-lg font-medium tracking-wide"
-    >
-      Search
-    </h2>
+    <h2 class="font-orbitron text-base-content text-lg font-medium tracking-wide">Search</h2>
     <label class="input input-primary validator">
       <Icon name="ri:search-line" />
       <input
@@ -36,11 +30,7 @@ const { tags, current } = Astro.props;
     </label>
   </div>
   <div class="flex flex-col gap-2">
-    <h2
-      class="font-orbitron text-base-content text-lg font-medium tracking-wide"
-    >
-      Tags
-    </h2>
+    <h2 class="font-orbitron text-base-content text-lg font-medium tracking-wide">Tags</h2>
     <div class="flex flex-wrap items-start gap-2">
       {
         tags.map((tag) => (
