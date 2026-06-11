@@ -75,10 +75,7 @@ const totalPages = pages.length;
 
             {
               currentPageIndex < totalPages - 1 ? (
-                <a
-                  href={`/workshops/${pages[currentPageIndex + 1]?.id}`}
-                  class="btn btn-primary"
-                >
+                <a href={`/workshops/${pages[currentPageIndex + 1]?.id}`} class="btn btn-primary">
                   次のページ
                   <Icon name="ri:arrow-right-line" class="h-4 w-4" />
                 </a>
@@ -114,9 +111,7 @@ const totalPages = pages.length;
           // モバイルの目次ドロップダウンを閉じる
           const dropdown = link.closest(".dropdown");
           if (dropdown) {
-            const button = dropdown.querySelector(
-              '[tabindex="0"]',
-            ) as HTMLElement;
+            const button = dropdown.querySelector('[tabindex="0"]') as HTMLElement;
             if (button) button.blur();
           }
         }
@@ -132,24 +127,14 @@ const totalPages = pages.length;
           const id = entry.target.id;
           // すべてのTOCリンクから active クラスを削除
           document.querySelectorAll(".toc-link").forEach((link) => {
-            link.classList.remove(
-              "bg-primary",
-              "text-primary-content",
-              "shadow-md",
-            );
+            link.classList.remove("bg-primary", "text-primary-content", "shadow-md");
             link.classList.add("hover:bg-base-200");
           });
           // 対応するTOCリンクに active クラスを追加
-          document
-            .querySelectorAll(`a[href="#${id}"].toc-link`)
-            .forEach((link) => {
-              link.classList.add(
-                "bg-primary",
-                "text-primary-content",
-                "shadow-md",
-              );
-              link.classList.remove("hover:bg-base-200");
-            });
+          document.querySelectorAll(`a[href="#${id}"].toc-link`).forEach((link) => {
+            link.classList.add("bg-primary", "text-primary-content", "shadow-md");
+            link.classList.remove("hover:bg-base-200");
+          });
         }
       });
     },

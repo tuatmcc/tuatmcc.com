@@ -16,9 +16,7 @@ const resolveResvgWasm = async () => {
     import("node:path"),
   ]);
 
-  return readFile(
-    join(process.cwd(), "dist/server/.prerender", RESVG_WASM_URL),
-  );
+  return readFile(join(process.cwd(), "dist/server/.prerender", RESVG_WASM_URL));
 };
 
 await initWasm(resolveResvgWasm());
@@ -38,9 +36,7 @@ const dataUrlToArrayBuffer = (dataUrl: string): ArrayBuffer => {
 
 const font = dataUrlToArrayBuffer(fontDataUrl);
 
-export const generateOgImage = async (
-  post: CollectionEntry<"posts">,
-): Promise<Uint8Array> => {
+export const generateOgImage = async (post: CollectionEntry<"posts">): Promise<Uint8Array> => {
   const svg = await satori(createElement(OgImage, { title: post.data.title }), {
     width: 1200,
     height: 630,

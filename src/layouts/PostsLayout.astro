@@ -31,11 +31,7 @@ const { page, tags, tag } = Astro.props;
           <h1 class="font-orbitron text-4xl font-medium">
             {tag === "news" ? "News" : tag === "blog" ? "Blog" : "Posts"}
           </h1>
-          <button
-            type="button"
-            class="btn lg:hidden"
-            onclick="post_search_modal.showModal()"
-          >
+          <button type="button" class="btn lg:hidden" onclick="post_search_modal.showModal()">
             <Icon name="ri:filter-3-fill" class="h-8 w-8" />
           </button>
           <dialog id="post_search_modal" class="modal">

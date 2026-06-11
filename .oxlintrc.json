@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "warn"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none",
+        "caughtErrors": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-unused-labels": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.astro", "**/*.svelte", "**/*.vue"],
+      "rules": {
+        "no-unused-vars": "off",
+        "no-undef": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["dist/", ".astro/", "node_modules/"]
+}

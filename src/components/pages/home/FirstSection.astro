@@ -20,15 +20,8 @@ import animatedLogo from "/public/images/animated_mcc.webp";
               class="h-59 w-59 object-cover lg:h-67 lg:w-67"
             />
           </div>
-          <div
-            id="static-logo"
-            class="col-start-1 row-end-1 hidden h-44 w-44 lg:h-50 lg:w-50"
-          >
-            <Image
-              alt="logo"
-              src={staticLogo}
-              class="h-44 w-44 lg:h-50 lg:w-50"
-            />
+          <div id="static-logo" class="col-start-1 row-end-1 hidden h-44 w-44 lg:h-50 lg:w-50">
+            <Image alt="logo" src={staticLogo} class="h-44 w-44 lg:h-50 lg:w-50" />
           </div>
         </div>
         <h1
@@ -49,11 +42,7 @@ import animatedLogo from "/public/images/animated_mcc.webp";
 
     const sequence: AnimationSequence = [
       ["#mcc-text", { width: 412 }, { duration: 0.5, delay: 3 }],
-      [
-        "#wordmark-logo",
-        { gap: "calc(var(--spacing) * 8)" },
-        { duration: 0.5, at: 3 },
-      ],
+      ["#wordmark-logo", { gap: "calc(var(--spacing) * 8)" }, { duration: 0.5, at: 3 }],
       ["#mcc-jp-text", { opacity: 1 }, { duration: 0.5, at: 3 }],
       ["#mcc-text", { opacity: 1 }, { duration: 0.5 }],
       ["#static-logo", { opacity: [0, 1] }, { duration: 0.1 }],

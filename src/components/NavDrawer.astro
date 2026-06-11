@@ -37,8 +37,7 @@ export interface Props {
   </div>
 
   <div class="drawer-side z-10">
-    <label for={drawerId} class="drawer-overlay" aria-label="close sidebar"
-    ></label>
+    <label for={drawerId} class="drawer-overlay" aria-label="close sidebar"></label>
 
     <div
       class="menu grid h-dvh w-80 max-w-10/12 p-0"
@@ -47,9 +46,7 @@ export interface Props {
           "polygon(0 0, 0 30%, 60px calc(30% + 60px), 60px calc(100% - 160px), 0 calc(100% - 100px), 0 100%, 100% 100%, 100% 0)",
       }}
     >
-      <div
-        class="relative flex flex-col overflow-y-hidden bg-gray-800 p-2 pl-16"
-      >
+      <div class="relative flex flex-col overflow-y-hidden bg-gray-800 p-2 pl-16">
         <label
           class="absolute top-0 right-0 z-20 h-16 w-16"
           for={drawerId}
@@ -57,12 +54,8 @@ export interface Props {
         >
           <Icon name="ri:close-fill" class="h-16 w-16 p-4 text-gray-50" />
         </label>
-        <TypoGraphy
-          class="pointer-events-none absolute h-full w-auto py-4 text-gray-700"
-        />
-        <div
-          class="flex h-full w-full flex-col justify-between overflow-y-auto pt-24 pl-8"
-        >
+        <TypoGraphy class="pointer-events-none absolute h-full w-auto py-4 text-gray-700" />
+        <div class="flex h-full w-full flex-col justify-between overflow-y-auto pt-24 pl-8">
           <ul class="flex flex-col gap-8">
             {
               links.map((link) => (
@@ -75,8 +68,7 @@ export interface Props {
             }
           </ul>
           <div class="relative">
-            <div class="absolute top-0 right-0 bottom-0 w-[4px] bg-blue-600">
-            </div>
+            <div class="absolute top-0 right-0 bottom-0 w-[4px] bg-blue-600"></div>
             <ul class="relative flex flex-col gap-8 p-4">
               {
                 socialLinks.map((socialLink) => (
@@ -87,10 +79,7 @@ export interface Props {
                       rel="noopener noreferrer"
                       class="flex flex-1 justify-end"
                     >
-                      <Icon
-                        name={socialLink.icon}
-                        class="h-6 w-6 text-gray-200"
-                      />
+                      <Icon name={socialLink.icon} class="h-6 w-6 text-gray-200" />
                     </a>
                   </li>
                 ))

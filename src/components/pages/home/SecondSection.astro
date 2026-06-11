@@ -48,10 +48,7 @@ const mccfetchProperties = [
   id="second-section"
   class="w-ful pointer-events-none relative h-svh overflow-hidden bg-repeat"
 >
-  <div
-    id="second-section-content"
-    class="fixed top-0 flex h-svh w-full justify-around opacity-0"
-  >
+  <div id="second-section-content" class="fixed top-0 flex h-svh w-full justify-around opacity-0">
     {/* Left Panel */}
     <div class="flex flex-col justify-around">
       <h2
@@ -59,9 +56,7 @@ const mccfetchProperties = [
       >
         What is <br class="lg:hidden" />
         <span class="text-primary pl-24 lg:pl-0">MCC</span>?
-        <Line1
-          class="absolute top-2 -left-8 w-100 text-gray-800 xl:w-160 dark:text-gray-200"
-        />
+        <Line1 class="absolute top-2 -left-8 w-100 text-gray-800 xl:w-160 dark:text-gray-200" />
       </h2>
 
       <p class="white relative px-4 lg:text-xl">
@@ -73,12 +68,8 @@ const mccfetchProperties = [
         <br />
         ゲーム制作等を行っています。
 
-        <Line2
-          class="absolute -top-16 left-4 w-100 text-gray-600 xl:w-160 dark:text-gray-400"
-        />
-        <Line4
-          class="absolute -bottom-16 left-4 w-100 text-gray-300 xl:w-160 dark:text-gray-600"
-        />
+        <Line2 class="absolute -top-16 left-4 w-100 text-gray-600 xl:w-160 dark:text-gray-400" />
+        <Line4 class="absolute -bottom-16 left-4 w-100 text-gray-300 xl:w-160 dark:text-gray-600" />
       </p>
 
       <ul class="relative flex w-100 flex-col items-stretch gap-4 p-8 lg:w-120">
@@ -141,10 +132,7 @@ const mccfetchProperties = [
             {
               mccfetchProperties.map(({ label, value }) => (
                 <p class="terminal-text text-shadow-bloom overflow-hidden text-nowrap text-shadow-white">
-                  <span class="text-amber-400 text-shadow-amber-400">
-                    {label}
-                  </span>
-                  : {value}
+                  <span class="text-amber-400 text-shadow-amber-400">{label}</span>: {value}
                 </p>
               ))
             }
@@ -193,12 +181,7 @@ const mccfetchProperties = [
       opacity: 0.2;
       background-blend-mode: overlay;
       position: absolute;
-      background-image: repeating-linear-gradient(
-        #0000,
-        #0000 1px,
-        #0033 1px,
-        #0033 2px
-      );
+      background-image: repeating-linear-gradient(#0000, #0000 1px, #0033 1px, #0033 2px);
       content: "";
       inset: 0;
       z-index: 1;
@@ -207,13 +190,7 @@ const mccfetchProperties = [
 </style>
 
 <script>
-  import {
-    inView,
-    animate,
-    type AnimationSequence,
-    stagger,
-    steps,
-  } from "motion";
+  import { inView, animate, type AnimationSequence, stagger, steps } from "motion";
 
   const inSequence: AnimationSequence = [
     ["#second-section", { pointerEvents: "auto" }],

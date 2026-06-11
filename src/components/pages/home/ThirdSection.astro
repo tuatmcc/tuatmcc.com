@@ -8,24 +8,21 @@ import workshopImage from "@assets/images/activities_workshop.webp";
 const activities = [
   {
     title: "合宿",
-    description:
-      "春・夏休みに2泊3日で、ハッカソンや競技プロの部内コンテストを行います。",
+    description: "春・夏休みに2泊3日で、ハッカソンや競技プロの部内コンテストを行います。",
     image: campImage,
     padding: "lg:pr-0 lg:pl-48",
     id: "ac1",
   },
   {
     title: "コンテスト",
-    description:
-      "兢プロのオンラインコンテストやICPC、その他CTF等のコンテストに参加しています。",
+    description: "兢プロのオンラインコンテストやICPC、その他CTF等のコンテストに参加しています。",
     image: campImage,
     padding: "lg:pr-8 lg:pl-32",
     id: "ac2",
   },
   {
     title: "学祭ゲーム制作",
-    description:
-      "Unity等を用いて、チームで新たにゲームを制作・出展しています。",
+    description: "Unity等を用いて、チームで新たにゲームを制作・出展しています。",
     image: campImage,
     padding: "lg:pr-16 lg:pl-24",
     id: "ac3",
@@ -55,10 +52,7 @@ const activities = [
 ];
 ---
 
-<section
-  id="third-section"
-  class="pointer-events-none relative h-svh w-full overflow-hidden"
->
+<section id="third-section" class="pointer-events-none relative h-svh w-full overflow-hidden">
   <div
     id="third-section-content"
     class="fixed inset-0 flex h-svh flex-col justify-center opacity-0 lg:gap-8"
@@ -68,17 +62,12 @@ const activities = [
     </h2>
     <div class="flex w-full flex-col justify-around lg:flex-row">
       <div class="flex flex-col gap-8">
-        <h2
-          class="font-orbitron hidden p-4 font-medium lg:inline-block lg:text-5xl"
-        >
+        <h2 class="font-orbitron hidden p-4 font-medium lg:inline-block lg:text-5xl">
           Major
           <br class="inline-block xl:hidden" />
           <span class="pl-16 text-amber-400 xl:p-0">A</span>ctivities
         </h2>
-        <p
-          id="third-section-description"
-          class="relative p-4 lg:-mr-24 lg:pl-24 lg:text-lg"
-        >
+        <p id="third-section-description" class="relative p-4 lg:-mr-24 lg:pl-24 lg:text-lg">
           MCCでは参加必須の活動はありません。<br />
           自分の興味のある活動に参加し、
           <br />
@@ -91,57 +80,44 @@ const activities = [
 
       <ul class="flex min-h-136 flex-col gap-2 p-4 lg:min-h-160 lg:gap-4">
         {
-          activities.map(
-            ({ title, image, padding, id, description }, index) => (
-              <li class:list={["activity-card relative", padding]}>
-                <div class="group relative h-full">
+          activities.map(({ title, image, padding, id, description }, index) => (
+            <li class:list={["activity-card relative", padding]}>
+              <div class="group relative h-full">
+                <div
+                  id={id}
+                  class:list={[
+                    "bg-primary p-0.5 duration-200",
+                    "[clip-path:polygon(40px_0,0_40px,0_100%,calc(100%-40px)_100%,100%_calc(100%-40px),100%_0)]",
+                  ]}
+                >
                   <div
-                    id={id}
                     class:list={[
-                      "bg-primary p-0.5 duration-200",
-                      "[clip-path:polygon(40px_0,0_40px,0_100%,calc(100%-40px)_100%,100%_calc(100%-40px),100%_0)]",
+                      "bg-base-200 p-1",
+                      "[clip-path:polygon(39px_0,0_39px,0_100%,calc(100%-39px)_100%,100%_calc(100%-39px),100%_0)]",
                     ]}
                   >
                     <div
                       class:list={[
-                        "bg-base-200 p-1",
-                        "[clip-path:polygon(39px_0,0_39px,0_100%,calc(100%-39px)_100%,100%_calc(100%-39px),100%_0)]",
+                        "bg-base-100 collapse-plus collapse px-8 duration-200",
+                        "[clip-path:polygon(37px_0,0_37px,0_100%,calc(100%-37px)_100%,100%_calc(100%-37px),100%_0)]",
                       ]}
                     >
-                      <div
-                        class:list={[
-                          "bg-base-100 collapse-plus collapse px-8 duration-200",
-                          "[clip-path:polygon(37px_0,0_37px,0_100%,calc(100%-37px)_100%,100%_calc(100%-37px),100%_0)]",
-                        ]}
-                      >
-                        <input
-                          type="radio"
-                          name="activities"
-                          class="peer"
-                          checked={index == 0}
-                        />
-                        <div class="collapse-title p-3 font-bold text-gray-50 lg:p-4 lg:text-xl">
-                          {title}
-                        </div>
-                        <div class="collapse-content">
-                          <p class="relative h-20 text-gray-50 lg:h-20 lg:w-100">
-                            {description}
-                          </p>
-                        </div>
-                        <div class="after:from-primary/70 after:to-secondary/50 peer-checked:after:from-primary/90 absolute inset-0 -z-1 duration-200 after:absolute after:inset-0 after:bg-gradient-to-br">
-                          <Image
-                            alt=""
-                            src={image}
-                            class="h-full w-full object-cover duration-200"
-                          />
-                        </div>
+                      <input type="radio" name="activities" class="peer" checked={index == 0} />
+                      <div class="collapse-title p-3 font-bold text-gray-50 lg:p-4 lg:text-xl">
+                        {title}
+                      </div>
+                      <div class="collapse-content">
+                        <p class="relative h-20 text-gray-50 lg:h-20 lg:w-100">{description}</p>
+                      </div>
+                      <div class="after:from-primary/70 after:to-secondary/50 peer-checked:after:from-primary/90 absolute inset-0 -z-1 duration-200 after:absolute after:inset-0 after:bg-gradient-to-br">
+                        <Image alt="" src={image} class="h-full w-full object-cover duration-200" />
                       </div>
                     </div>
                   </div>
                 </div>
-              </li>
-            ),
-          )
+              </div>
+            </li>
+          ))
         }
       </ul>
     </div>

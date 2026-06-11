@@ -21,10 +21,8 @@ function ipv4ToInt(ip: string): number | null {
   const m = ip.trim().match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
   if (!m || m.length !== 5) return null;
   const [a, b, c, d] = m.slice(1).map(Number);
-  if ((!a && a !== 0) || (!b && b !== 0) || (!c && c !== 0) || (!d && d !== 0))
-    return null;
-  if ([a, b, c, d].some((n) => !Number.isInteger(n) || n < 0 || n > 255))
-    return null;
+  if ((!a && a !== 0) || (!b && b !== 0) || (!c && c !== 0) || (!d && d !== 0)) return null;
+  if ([a, b, c, d].some((n) => !Number.isInteger(n) || n < 0 || n > 255)) return null;
   // Use multiplication instead of bit shifting to avoid signed integer issues
   return (a * 256 * 256 * 256 + b * 256 * 256 + c * 256 + d) >>> 0;
 }

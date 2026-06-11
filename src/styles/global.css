@@ -49,9 +49,7 @@
   --text-shadow-bloom: 0 0 4px var(--tw-text-shadow-color);
   --color-divider: var(--color-gray-200);
   --spacing-navbar: calc(var(--spacing) * 16);
-  --spacing-navbar-with-margin: calc(
-    var(--spacing-navbar) + var(--spacing) * 8
-  );
+  --spacing-navbar-with-margin: calc(var(--spacing-navbar) + var(--spacing) * 8);
 }
 
 @layer base {
