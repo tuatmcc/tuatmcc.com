@@ -17,7 +17,7 @@ const resolveResvgWasm = async () => {
   ]);
 
   return readFile(
-    join(process.cwd(), "dist/server/.prerender", RESVG_WASM_URL),
+    join(process.cwd(), "dist/client", RESVG_WASM_URL.replace(/^\//, "")),
   );
 };
 
