@@ -1,22 +1,26 @@
 # tuatmcc.com
 
-## Overview
+## 概要
 
-MCC homepage built with [Astro](https://astro.build/) and [Bun](https://bun.sh/), Deployed on [Cloudflare Workers](https://developers.cloudflare.com/workers/).
+MCC のホームページ.
 
-## Features
+- [Astro](https://astro.build/)
+- [Bun](https://bun.sh/)
+- [Cloudflare Workers](https://developers.cloudflare.com/workers/).
 
-- [x] Markdown Posts ([dedicated content repository](https://github.com/tuatmcc/hp-md-content))
-- [x] Dark mode support
-- [x] Redirects from old URLs
-- [ ] Workshop Materials
-- [ ] Content Management System
+## ロードマップ
+
+- [x] マークダウン記事 (→ [コンテンツ専用リポジトリ](https://github.com/tuatmcc/hp-md-content))
+- [x] 旧サイトからのリダイレクト
+- [x] 部内講習資料
+- [ ] CMS
 
 ## Setup
 
 Clone repo and install bun with `mise`.
 
 ```sh
+mise trust
 mise install
 ```
 
