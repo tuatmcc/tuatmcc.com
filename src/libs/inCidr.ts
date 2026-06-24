@@ -17,6 +17,12 @@ export function inCidr(ip: string, cidr: string): boolean {
   return (ipNum & mask) === (netNum & mask);
 }
 
+export function inCidrAny(ip: string, cidrList: string): boolean {
+	const cidrs = cidrList.split(/[,\s]+/).filter((c) => c.length > 0);
+	if (cidrs.length === 0) return false;
+	return cidrs.some((cidr) => inCidr(ip, cidr));
+}
+
 function ipv4ToInt(ip: string): number | null {
   const m = ip.trim().match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
   if (!m || m.length !== 5) return null;
