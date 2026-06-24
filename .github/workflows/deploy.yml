@@ -69,18 +69,6 @@ jobs:
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
-      - name: Build | Drop unused SESSION KV binding
-        run: |
-          bun -e "
-          const fs = require('fs');
-          const p = 'dist/server/wrangler.json';
-          const j = JSON.parse(fs.readFileSync(p, 'utf8'));
-          j.kv_namespaces = [];
-          if (j.previews) j.previews.kv_namespaces = [];
-          fs.writeFileSync(p, JSON.stringify(j));
-          console.log('Stripped SESSION binding from', p);
-          "
-
       - name: Run | Deploy
         uses: cloudflare/wrangler-action@v3
         id: deploy-preview

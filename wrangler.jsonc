@@ -6,5 +6,11 @@
     "directory": "./dist",
     "not_found_handling": "404-page"
   },
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "7fca19d7d38a42a291566f79b76b68ad"
+    }
+  ]
 }
