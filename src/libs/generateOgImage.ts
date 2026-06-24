@@ -16,9 +16,21 @@ const resolveResvgWasm = async () => {
     import("node:path"),
   ]);
 
-  return readFile(
-    join(process.cwd(), "dist/client", RESVG_WASM_URL.replace(/^\//, "")),
-  );
+  const fileName = RESVG_WASM_URL.split("/").pop();
+  if (!fileName) {
+    throw new Error("Could not derive resvg wasm filename from URL");
+  }
+  const candidates = [
+    join(process.cwd(), "dist/client/_astro", fileName),
+    join(process.cwd(), "dist/server/.prerender/_astro", fileName),
+    join(process.cwd(), "dist/server/_astro", fileName),
+  ];
+  for (const path of candidates) {
+    try {
+      return await readFile(path);
+    } catch {}
+  }
+  throw new Error(`resvg wasm not found in any of: ${candidates.join(", ")}`);
 };
 
 await initWasm(resolveResvgWasm());
