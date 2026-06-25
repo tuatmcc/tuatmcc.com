@@ -7,6 +7,9 @@
     "not_found_handling": "404-page"
   },
   "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
   "kv_namespaces": [
     {
       "binding": "SESSION",
