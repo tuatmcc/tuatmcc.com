@@ -6,6 +6,9 @@
     "directory": "./dist",
     "not_found_handling": "404-page"
   },
+  "secrets": {
+    "required": ["DISCORD_INVITE", "TUAT_CIDR"]
+  },
   "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true
