@@ -1,6 +1,5 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "main": "@astrojs/cloudflare/entrypoints/server",
   "name": "tuatmcc-com",
   "compatibility_date": "2025-07-31",
   "assets": {
