@@ -1,5 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
+  "main": "@astrojs/cloudflare/entrypoints/server",
   "name": "tuatmcc-com",
   "compatibility_date": "2025-07-31",
   "assets": {
@@ -9,7 +10,6 @@
   "secrets": {
     "required": ["DISCORD_INVITE", "TUAT_CIDR"]
   },
-  "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true
   },
