@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "wrangler types && astro dev",
     "build": "wrangler types && astro build",
-    "preview": "wrangler types && wrangler dev --assets=./dist",
+    "preview": "wrangler types && astro preview",
     "astro": "astro",
     "lint": "biome check . && prettier --check .",
     "format": "biome check --write . && prettier --write .",
