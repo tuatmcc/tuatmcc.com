@@ -7,8 +7,8 @@
     "build": "wrangler types && astro build",
     "preview": "wrangler types && astro preview",
     "astro": "astro",
-    "lint": "biome check . && prettier --check .",
-    "format": "biome check --write . && prettier --write .",
+    "lint": "oxlint --deny-warnings && prettier --check .",
+    "format": "prettier --write .",
     "typecheck": "astro check"
   },
   "dependencies": {
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@biomejs/biome": "^2.5.1",
+    "oxlint": "^1.73.0",
     "@iconify-json/fa": "^1.2.1",
     "@iconify-json/ri": "^1.2.10",
     "@resvg/resvg-wasm": "^2.6.2",
