@@ -2,7 +2,6 @@
 export const prerender = false;
 
 import { DISCORD_INVITE, TUAT_CIDR } from "astro:env/server";
-import GlobalLayout from "../../layouts/GlobalLayout.astro";
 import { inCidrAny } from "../../libs/inCidr";
 
 const ip = Astro.clientAddress;
@@ -12,26 +11,6 @@ const allowed = isDev || (Boolean(ip) && inCidrAny(ip, TUAT_CIDR));
 if (!allowed) {
   return Astro.redirect("/join/manual", 302);
 }
+
+return Astro.redirect(`https://discord.gg/${DISCORD_INVITE}`, 302);
 ---
-
-<GlobalLayout title="MCC - Discord に参加">
-  <main class="relative grid gap-8 p-8">
-    <h1 class="font-orbitron text-4xl font-bold">Join</h1>
-
-    <section class="grid gap-4">
-      <p>学内ネットワークからのアクセスのため、招待リンクを表示しています。</p>
-      <a
-        class="btn btn-primary w-fit"
-        href={`https://discord.gg/${DISCORD_INVITE}`}
-        rel="noopener noreferrer"
-      >
-        Discord に参加
-      </a>
-      <p class="text-sm opacity-70">
-        学外からアクセスしている場合は
-        <a href="/join/manual" class="link link-secondary">/join/manual</a>
-        をご覧ください。
-      </p>
-    </section>
-  </main>
-</GlobalLayout>
