@@ -12,5 +12,8 @@ if (!allowed) {
   return Astro.redirect("/join/manual", 302);
 }
 
-return Astro.redirect(`https://discord.gg/${DISCORD_INVITE}`, 302);
+return new Response(null, {
+  status: 302,
+  headers: { Location: `https://discord.gg/${DISCORD_INVITE}` },
+});
 ---
