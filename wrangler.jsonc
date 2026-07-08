@@ -3,8 +3,7 @@
   "name": "tuatmcc-com",
   "compatibility_date": "2025-07-31",
   "assets": {
-    "directory": "./dist",
-    "not_found_handling": "404-page"
+    "directory": "./dist"
   },
   "secrets": {
     "required": ["DISCORD_INVITE", "TUAT_CIDR"]
