@@ -14,20 +14,21 @@
 
 ## ファイル変更サマリ
 
-| ファイル | 操作 | 役割 |
-| --- | --- | --- |
-| `package.json` | 変更 | Astro 関連パッケージのバージョンを更新 |
-| `bun.lock` | 変更 | lockfile を Astro 7 系で再生成 |
-| `astro.config.ts` | 変更 (可能性) | deprecated 設定の置換 |
-| `src/**/*.astro` | 変更 (可能性) | codemod が生成する API 置換 |
-| `src/**/*.ts(x)` | 変更 (可能性) | codemod が生成する API 置換 |
-| `src/content/**` | 変更 (可能性) | Content Collection API の置換 |
+| ファイル          | 操作          | 役割                                   |
+| ----------------- | ------------- | -------------------------------------- |
+| `package.json`    | 変更          | Astro 関連パッケージのバージョンを更新 |
+| `bun.lock`        | 変更          | lockfile を Astro 7 系で再生成         |
+| `astro.config.ts` | 変更 (可能性) | deprecated 設定の置換                  |
+| `src/**/*.astro`  | 変更 (可能性) | codemod が生成する API 置換            |
+| `src/**/*.ts(x)`  | 変更 (可能性) | codemod が生成する API 置換            |
+| `src/content/**`  | 変更 (可能性) | Content Collection API の置換          |
 
 ---
 
 ## Task 1: 事前コミットで現状を保全
 
 **Files:**
+
 - (なし / `git commit` のみ)
 
 - [ ] **Step 1: 作業ディレクトリの状態を確認**
@@ -62,6 +63,7 @@ grep -E '"(astro|@astrojs/[a-z-]+|astro-[a-z-]+)"' package.json
 ## Task 2: `astro upgrade` 実行
 
 **Files:**
+
 - 変更: `package.json`, `bun.lock`, `astro.config.ts`, `src/**` (codemod が触る)
 
 - [ ] **Step 1: アップグレード CLI を実行**
@@ -90,6 +92,7 @@ git diff --stat
 ## Task 3: 依存をインストール
 
 **Files:**
+
 - 変更: `node_modules/**` (lockfile 変更に伴う)
 
 - [ ] **Step 1: bun install を実行**
@@ -109,6 +112,7 @@ bun install
 ## Task 4: 型チェック
 
 **Files:**
+
 - 変更 (可能性): `src/**` および `astro.config.ts`
 
 - [ ] **Step 1: typecheck を実行**
@@ -122,6 +126,7 @@ bun run typecheck
 - [ ] **Step 2: エラーが出た場合は手動修正**
 
 エラーメッセージに従い、該当するファイル・行を修正する。典型的な修正:
+
 - 削除済み API の呼び出しを新しい API へ置換
 - 型定義の不整合 (Astro 7 で型が変更されているケース)
 - `astro.config.ts` の設定値置換
@@ -139,6 +144,7 @@ bun run typecheck
 ## Task 5: リント
 
 **Files:**
+
 - 変更 (可能性): `src/**` (Biome / Prettier の自動修正による)
 
 - [ ] **Step 1: lint を実行**
@@ -170,6 +176,7 @@ bun run lint
 ## Task 6: バージョンを確認
 
 **Files:**
+
 - (なし / 確認のみ)
 
 - [ ] **Step 1: 対象パッケージのバージョンが 7 系 (または Astro 7 互換) であることを確認**
@@ -185,6 +192,7 @@ grep -E '"(astro|@astrojs/[a-z-]+|astro-[a-z-]+)"' package.json
 ## Task 7: コミット
 
 **Files:**
+
 - 変更: すべての変更ファイル
 
 - [ ] **Step 1: 差分全体をステージング**
@@ -206,6 +214,7 @@ git commit -m "deps: upgrade astro 7 and @astrojs/* integrations"
 ## Task 8: 最終確認
 
 **Files:**
+
 - (なし / 確認のみ)
 
 - [ ] **Step 1: コミットログを確認**

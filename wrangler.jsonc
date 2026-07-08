@@ -3,18 +3,18 @@
   "name": "tuatmcc-com",
   "compatibility_date": "2025-07-31",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
   },
   "secrets": {
-    "required": ["DISCORD_INVITE", "TUAT_CIDR"]
+    "required": ["DISCORD_INVITE", "TUAT_CIDR"],
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "kv_namespaces": [
     {
       "binding": "SESSION",
-      "id": "7fca19d7d38a42a291566f79b76b68ad"
-    }
-  ]
+      "id": "7fca19d7d38a42a291566f79b76b68ad",
+    },
+  ],
 }

@@ -63,10 +63,10 @@
 
 ### コンポーネント構成
 
-| ファイル | 種類 | 役割 |
-| --- | --- | --- |
+| ファイル                     | 種類 | 役割                                            |
+| ---------------------------- | ---- | ----------------------------------------------- |
 | `src/pages/join/index.astro` | 新規 | IP 判定 → Discord 招待 or manual 誘導の出し分け |
-| `src/libs/inCidr.ts` | 変更 | `inCidrAny(ip, cidrList)` を追加 |
+| `src/libs/inCidr.ts`         | 変更 | `inCidrAny(ip, cidrList)` を追加                |
 
 #### `src/pages/join/index.astro`
 
@@ -108,7 +108,7 @@ const allowed = isDev || (Boolean(ip) && inCidrAny(ip, TUAT_CIDR));
 #### `inCidrAny` のシグネチャ
 
 ```ts
-export function inCidrAny(ip: string, cidrList: string): boolean
+export function inCidrAny(ip: string, cidrList: string): boolean;
 ```
 
 - `cidrList.split(/[,\s]+/)` で分割し、空文字を除外
@@ -117,14 +117,14 @@ export function inCidrAny(ip: string, cidrList: string): boolean
 
 ## エラーハンドリング
 
-| 状況 | 挙動 |
-| --- | --- |
-| `Astro.clientAddress` が空 / undefined | `allowed = false` として NotAllowedSection を表示 |
-| `TUAT_CIDR` が空 / 未設定 | 既存 `envField` 設定の `optional: false` でビルドが落ちる |
-| `DISCORD_INVITE` が空 / 未設定 | 既存 `envField` 設定の `optional: false` でビルドが落ちる |
-| `cidrList` に不正な CIDR が含まれる | `inCidr` が false を返すので、その CIDR だけスキップ。他が正しければ全体 true になり得る |
-| `ip` が IPv6(`:` を含む) | 既存 `inCidr` が false を返すため `inCidrAny` も全体で false → NotAllowedSection |
-| dev 環境で判定スキップ | `import.meta.env.DEV` で早期 return、誤って false にならない |
+| 状況                                   | 挙動                                                                                     |
+| -------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `Astro.clientAddress` が空 / undefined | `allowed = false` として NotAllowedSection を表示                                        |
+| `TUAT_CIDR` が空 / 未設定              | 既存 `envField` 設定の `optional: false` でビルドが落ちる                                |
+| `DISCORD_INVITE` が空 / 未設定         | 既存 `envField` 設定の `optional: false` でビルドが落ちる                                |
+| `cidrList` に不正な CIDR が含まれる    | `inCidr` が false を返すので、その CIDR だけスキップ。他が正しければ全体 true になり得る |
+| `ip` が IPv6(`:` を含む)               | 既存 `inCidr` が false を返すため `inCidrAny` も全体で false → NotAllowedSection         |
+| dev 環境で判定スキップ                 | `import.meta.env.DEV` で早期 return、誤って false にならない                             |
 
 ## テスト
 

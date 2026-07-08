@@ -36,7 +36,7 @@ function ensureContentRepo() {
 
     // No directory; perform a fresh clone.
     clone();
-  } catch (_err) {
+  } catch {
     // As a last resort, attempt a clean clone.
     try {
       reclone();
